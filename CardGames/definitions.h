@@ -16,5 +16,9 @@ namespace general {
 }
 
 namespace blackjack {
+	const int kDeckSize = 52;
+	enum class Suit {kDiamonds, kSpades, kHeart, kClubs};
+	enum class CardValue {kAceMin = 1, kTwo, kThree, kFour, kFive, kSix, kSeven, kEight, kNine,
+		kTen, kJack = kTen, kQueen = kTen, kKing = kTen, kAceMax};
 }
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <iostream>
 
 namespace definitions {
@@ -20,5 +21,9 @@ namespace blackjack {
 	enum class Suit {kDiamonds, kSpades, kHeart, kClubs};
 	enum class CardValue {kAceMin = 1, kTwo, kThree, kFour, kFive, kSix, kSeven, kEight, kNine,
 		kTen, kJack = kTen, kQueen = kTen, kKing = kTen, kAceMax};
+	const std::vector<Suit> SuitsVector{ Suit::kDiamonds, Suit::kSpades, Suit::kHeart, Suit::kClubs };
+	const std::vector<CardValue> ValuesVector{ CardValue::kAceMin, CardValue::kTwo, CardValue::kThree,
+		CardValue::kFour, CardValue::kFive, CardValue::kSix, CardValue::kSeven, CardValue::kEight,
+		CardValue::kNine, CardValue::kTen, CardValue::kJack, CardValue::kQueen, CardValue::kKing };
 }
 }

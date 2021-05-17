@@ -11,12 +11,11 @@ using game_type = definitions::general::GameType;
 
 int main()
 {
-	BlackjackCard bj1(8, definitions::blackjack::Suit::kClubs, true);
-	BlackjackCard bj2(3, definitions::blackjack::Suit::kHeart, true);
-
-	bj1.PrintCard();
-	bj2.PrintCard();
-
+	BlackjackDeck bjd;
+	bjd.PrintDeck();
+	bjd.Shuffle();
+	std::cout << "After shuffle...\n";
+	bjd.PrintDeck();
 	std::unique_ptr<CardGameCreator> game = std::make_unique<CardGameCreator>();
 	std::unique_ptr<CardGame> specific_game;
 	int chosen_game;

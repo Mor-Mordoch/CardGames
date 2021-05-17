@@ -3,8 +3,9 @@
 BlackjackCard::BlackjackCard(int value, Suit suit, bool is_available) : Card(value, is_available), suit_{ suit } {
 }
 
-//BlackjackCard::BlackjackCard(CardValue value, Suit suit) {
-//}
+BlackjackCard::BlackjackCard(CardValue value, Suit suit, bool is_available)
+	: BlackjackCard(static_cast<int>(value), suit, is_available) {
+}
 
 int BlackjackCard::GetValue() {
 	return value_;
@@ -33,4 +34,8 @@ void BlackjackCard::PrintCard() {
 		std::cout << "Error!";
 	}
 	std::cout << std::endl;
+}
+
+Suit BlackjackCard::GetSuit() {
+	return suit_;
 }
